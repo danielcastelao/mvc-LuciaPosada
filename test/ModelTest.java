@@ -29,4 +29,10 @@ public class ModelTest {
         Assertions.assertEquals(velocidad,24);
         Assertions.assertEquals(coche.velocidad,velocidad);
     }
+
+    @Test
+    public void getVelocidad(){
+        Coche coche = Model.crearCoche("43656C35FD","Seat",45);
+        Assertions.assertEquals(45,Model.getVelocidad("43656C35FD"));
+    }
 }
