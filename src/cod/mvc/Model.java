@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Model {
 
-    static ArrayList<Coche> parking;
+    static ArrayList<Coche> parking = new ArrayList<>();
 
     public static Coche crearCoche(String matricula,String modelo,Integer velocidad){
         Coche cocheNuevo = new Coche(matricula,modelo,velocidad);
