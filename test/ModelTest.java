@@ -21,4 +21,12 @@ public class ModelTest {
         Coche coche = Model.crearCoche("43656C35FD","Seat",0);
         Assertions.assertSame(coche,Model.getCoche("43656C35FD"));
     }
+
+    @Test
+    public void comprobacionCambiarVelocidad(){
+        Coche coche = Model.crearCoche("43656C35FD","Seat",0);
+        Integer velocidad = Model.cambiarVelocidad("43656C35FD",24);
+        Assertions.assertEquals(velocidad,24);
+        Assertions.assertEquals(coche.velocidad,velocidad);
+    }
 }
