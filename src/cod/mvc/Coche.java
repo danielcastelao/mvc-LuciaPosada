@@ -3,13 +3,17 @@ package cod.mvc;
 
 public class Coche {
 
-    private String matricuka;
+    private String matricula;
     private String modelo;
     private Integer velocidad;
 
-    public Coche(String matricuka, String modelo, Integer velocidad) {
-        this.matricuka = matricuka;
+    public Coche(String matricula, String modelo, Integer velocidad) {
+        this.matricula = matricula;
         this.modelo = modelo;
         this.velocidad = velocidad;
+    }
+
+    public String getMatricula() {
+        return matricula;
     }
 }
