@@ -3,9 +3,9 @@ package cod.mvc;
 
 public class Coche {
 
-    private String matricula;
-    private String modelo;
-    private Integer velocidad;
+    String matricula;
+    String modelo;
+    Integer velocidad;
 
     public Coche(String matricula, String modelo, Integer velocidad) {
         this.matricula = matricula;
@@ -13,11 +13,4 @@ public class Coche {
         this.velocidad = velocidad;
     }
 
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setVelocidad(Integer velocidad) {
-        this.velocidad = velocidad;
-    }
 }
