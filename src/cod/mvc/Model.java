@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Model {
 
-    private static ArrayList<Coche> parking;
+    static ArrayList<Coche> parking;
 
     public static Coche crearCoche(String matricula,String modelo,Integer velocidad){
         Coche cocheNuevo = new Coche(matricula,modelo,velocidad);
@@ -15,7 +15,7 @@ public class Model {
 
     public static Coche getCoche(String matricula) {
         for (Coche coche : parking) {
-            if (coche.getMatricula().equals(matricula)) {
+            if (coche.matricula.equals(matricula)) {
                 return coche;
             }
         }
@@ -24,12 +24,12 @@ public class Model {
 
     public static Integer cambiarVelocidad(String matricula,Integer velocidad){
         Coche coche = getCoche(matricula);
-        coche.setVelocidad(velocidad);
+        coche.velocidad = velocidad;
         return velocidad;
     }
 
     public static Integer getVelocidad(String matricula){
         Coche coche = getCoche(matricula);
-        return coche.getVelocidad();
+        return coche.velocidad;
     }
 }
