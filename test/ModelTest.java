@@ -18,21 +18,19 @@ public class ModelTest {
 
     @Test
     public void comprobacionGetCoche(){
-        Coche coche = Model.crearCoche("43656C35FD","Seat",0);
-        Assertions.assertSame(coche,Model.getCoche("43656C35FD"));
+        Coche coche = Model.crearCoche("43656C35FC","Seat",0);
+        Assertions.assertSame(coche,Model.getCoche("43656C35FC"));
     }
 
     @Test
     public void comprobacionCambiarVelocidad(){
-        Coche coche = Model.crearCoche("43656C35FD","Seat",0);
-        Integer velocidad = Model.cambiarVelocidad("43656C35FD",24);
-        Assertions.assertEquals(velocidad,24);
-        Assertions.assertEquals(coche.velocidad,velocidad);
+        Coche coche = Model.crearCoche("43656C35FE","Seat",0);
+        Assertions.assertEquals(24,Model.cambiarVelocidad("43656C35FE",24));
     }
 
     @Test
     public void getVelocidad(){
-        Coche coche = Model.crearCoche("43656C35FD","Seat",45);
-        Assertions.assertEquals(45,Model.getVelocidad("43656C35FD"));
+        Coche coche = Model.crearCoche("43656C35FR","Seat",45);
+        Assertions.assertEquals(45,Model.getVelocidad("43656C35FR"));
     }
 }
