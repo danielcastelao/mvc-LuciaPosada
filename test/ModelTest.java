@@ -11,9 +11,7 @@ public class ModelTest {
     @Test
     public void comprobacionCrearCoche() {
         Coche coche = Model.crearCoche("43656C35FD","Seat",0);
-        Assertions.assertEquals("43656C35FD",coche.matricula);
-        Assertions.assertEquals("Seat",coche.modelo);
-        Assertions.assertEquals(0,coche.velocidad);
+        Assertions.assertSame(coche,Model.getCoche("43656C35FD"));
     }
 
     @Test
