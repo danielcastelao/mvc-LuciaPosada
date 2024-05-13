@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public class Model implements Observable {
 
+    public static ArrayList<Coche> parking = new ArrayList<>();
+
     public static ArrayList<Observer> observers = new ArrayList<>();
 
     /**
@@ -37,8 +39,6 @@ public class Model implements Observable {
             observer.update(coche);
         }
     }
-
-    public static ArrayList<Coche> parking = new ArrayList<>();
 
     /**
      * Crea un coche con los parametros especificados
