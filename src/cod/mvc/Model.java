@@ -3,9 +3,24 @@ package cod.mvc;
 
 import java.util.ArrayList;
 
-public class Model {
+public class Model implements Observable{
 
     public static ArrayList<Observer> observers = new ArrayList<>();
+
+    @Override
+    public void addObserver(Observer arg) {
+
+    }
+
+    @Override
+    public void removeObserver(Observer arg) {
+
+    }
+
+    @Override
+    public void notifyObservers(Coche arg) {
+
+    }
 
     public static ArrayList<Coche> parking = new ArrayList<>();
 
