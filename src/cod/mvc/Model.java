@@ -7,9 +7,13 @@ public class Model implements Observable{
 
     public static ArrayList<Observer> observers = new ArrayList<>();
 
+    /**
+     * Añade un objecto de tipo observer al arraylist [observers]
+     * @param observer objecto a añadir al list
+     */
     @Override
-    public void addObserver(Observer arg) {
-
+    public void addObserver(Observer observer) {
+        observers.add(observer);
     }
 
     @Override
