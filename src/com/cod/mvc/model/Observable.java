@@ -4,9 +4,9 @@ import com.cod.mvc.controller.Observer;
 
 public interface Observable {
 
-    void addObserver(Observer arg);
+    static void addObserver(Observer arg) {}
 
-    void removeObserver(Observer arg);
+    static void removeObserver(Observer arg) {}
 
-    void notifyObservers(Coche arg);
+    static void notifyObservers(Coche arg) {}
 }
