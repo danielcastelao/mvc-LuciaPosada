@@ -17,7 +17,7 @@ public class ViewTest {
         System.setOut(new PrintStream(outContent));
 
         View.muestraVelocidad("374456-BCD", 35);
-        String salidaEsperada = "La velocidad del coche con matricula "+coche.matricula+", es "+coche.velocidad;
+        String salidaEsperada = "La velocidad del coche con matricula "+coche.matricula+", es "+coche.velocidad+" Km/h";
         Assertions.assertEquals(salidaEsperada, outContent.toString());
     }
 
