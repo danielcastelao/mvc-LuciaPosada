@@ -25,9 +25,15 @@ public class Model implements Observable{
         observers.remove(observer);
     }
 
+    /**
+     * Recorre los observers del arraylist y los notifica de un cambio
+     * @param coche el objecto en el que se ha producido un cambio
+     */
     @Override
-    public void notifyObservers(Coche arg) {
-
+    public void notifyObservers(Coche coche) {
+        for(Observer observer : observers){
+            observer.update(coche);
+        }
     }
 
     public static ArrayList<Coche> parking = new ArrayList<>();
