@@ -15,8 +15,7 @@ public class Model implements Observable {
      * Añade un objecto de tipo observer al arraylist [observers]
      * @param observer objecto a añadir al list
      */
-    @Override
-    public void addObserver(Observer observer) {
+    public static void addObserver(Observer observer) {
         observers.add(observer);
     }
 
@@ -24,8 +23,7 @@ public class Model implements Observable {
      * Elimina un objecto de tipo observer del arraylist [observers]
      * @param observer objecto a eliminar del list
      */
-    @Override
-    public void removeObserver(Observer observer) {
+    public static void removeObserver(Observer observer) {
         observers.remove(observer);
     }
 
@@ -33,8 +31,7 @@ public class Model implements Observable {
      * Recorre los observers del arraylist y los notifica de un cambio
      * @param coche el objecto en el que se ha producido un cambio
      */
-    @Override
-    public void notifyObservers(Coche coche) {
+    public static void notifyObservers(Coche coche) {
         for(Observer observer : observers){
             observer.update(coche);
         }
@@ -44,11 +41,10 @@ public class Model implements Observable {
      * Crea un coche con los parametros especificados
      * @param matricula variable para el nuevo objecto
      * @param modelo variable para el nuevo objecto
-     * @param velocidad variable para el nuevo objecto
      * @return coche creado
      */
-    public static Coche crearCoche(String matricula,String modelo,Integer velocidad){
-        Coche cocheNuevo = new Coche(matricula,modelo,velocidad);
+    public static Coche crearCoche(String matricula,String modelo){
+        Coche cocheNuevo = new Coche(matricula,modelo);
         parking.add(cocheNuevo);
         return cocheNuevo;
     }
@@ -73,7 +69,7 @@ public class Model implements Observable {
      * @param velocidad variable por la que cambiar la velocidad
      * @return nueva velocidad
      */
-    public Integer cambiarVelocidad(String matricula,Integer velocidad){
+    public static Integer cambiarVelocidad(String matricula,Integer velocidad){
         Coche coche = getCoche(matricula);
         coche.velocidad = velocidad;
         notifyObservers(coche);
