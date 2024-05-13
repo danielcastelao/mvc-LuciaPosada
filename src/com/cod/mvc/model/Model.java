@@ -73,9 +73,10 @@ public class Model implements Observable {
      * @param velocidad variable por la que cambiar la velocidad
      * @return nueva velocidad
      */
-    public static Integer cambiarVelocidad(String matricula,Integer velocidad){
+    public Integer cambiarVelocidad(String matricula,Integer velocidad){
         Coche coche = getCoche(matricula);
         coche.velocidad = velocidad;
+        notifyObservers(coche);
         return coche.velocidad;
     }
 
