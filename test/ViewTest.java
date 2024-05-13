@@ -1,7 +1,7 @@
 
-import cod.mvc.Coche;
-import cod.mvc.Model;
-import cod.mvc.View;
+import com.cod.mvc.model.Coche;
+import com.cod.mvc.model.Model;
+import com.cod.mvc.view.View;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;

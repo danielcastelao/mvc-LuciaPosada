@@ -1,9 +1,11 @@
 
-package cod.mvc;
+package com.cod.mvc.model;
+
+import com.cod.mvc.controller.Observer;
 
 import java.util.ArrayList;
 
-public class Model implements Observable{
+public class Model implements Observable {
 
     public static ArrayList<Observer> observers = new ArrayList<>();
 

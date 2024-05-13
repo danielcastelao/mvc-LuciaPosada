@@ -1,4 +1,6 @@
-package cod.mvc;
+package com.cod.mvc.model;
+
+import com.cod.mvc.controller.Observer;
 
 public interface Observable {
 
