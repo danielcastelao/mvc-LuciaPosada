@@ -16,9 +16,13 @@ public class Model implements Observable{
         observers.add(observer);
     }
 
+    /**
+     * Elimina un objecto de tipo observer del arraylist [observers]
+     * @param observer objecto a eliminar del list
+     */
     @Override
-    public void removeObserver(Observer arg) {
-
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
     }
 
     @Override
