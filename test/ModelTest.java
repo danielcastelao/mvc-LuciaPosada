@@ -8,25 +8,29 @@ public class ModelTest {
 
     @Test
     public void comprobacionCrearCoche() {
-        Coche coche = Model.crearCoche("43656C35FD","Seat");
-        Assertions.assertSame(coche,Model.getCoche("43656C35FD"));
+        Model miModel = new Model();
+        Coche coche = miModel.crearCoche("43656C35FD","Seat");
+        Assertions.assertSame(coche,miModel.getCoche("43656C35FD"));
     }
 
     @Test
     public void comprobacionGetCoche(){
-        Coche coche = Model.crearCoche("43656C35FC","Seat");
-        Assertions.assertSame(coche,Model.getCoche("43656C35FC"));
+        Model miModel = new Model();
+        Coche coche = miModel.crearCoche("43656C35FC","Seat");
+        Assertions.assertSame(coche,miModel.getCoche("43656C35FC"));
     }
 
     @Test
     public void comprobacionCambiarVelocidad(){
-        Coche coche = Model.crearCoche("43656C35FE","Seat");
-        Assertions.assertEquals(24,Model.cambiarVelocidad("43656C35FE",24));
+        Model miModel = new Model();
+        Coche coche = miModel.crearCoche("43656C35FE","Seat");
+        Assertions.assertEquals(24,miModel.cambiarVelocidad("43656C35FE",24));
     }
 
     @Test
     public void getVelocidad(){
-        Coche coche = Model.crearCoche("43656C35FR","Seat");
-        Assertions.assertEquals(0,Model.getVelocidad("43656C35FR"));
+        Model miModel = new Model();
+        Coche coche = miModel.crearCoche("43656C35FR","Seat");
+        Assertions.assertEquals(0,miModel.getVelocidad("43656C35FR"));
     }
 }
