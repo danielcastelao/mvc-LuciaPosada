@@ -5,13 +5,20 @@ import com.cod.mvc.model.Model;
 
 public class Controller {
 
-    public Controller() {
+    private final Model miModel = new Model();
+
+    public Controller(Model miModel) {
 
         ObserverVelocidad ObVelocida = new ObserverVelocidad();
-        Model.addObserver(ObVelocida);
+        miModel.addObserver(ObVelocida);
 
         ObserverLimite ObLimite = new ObserverLimite();
-        Model.addObserver(ObLimite);
+        miModel.addObserver(ObLimite);
 
     }
+
+    public void crearCoche(String nombre, String matricula){
+        miModel.crearCoche(matricula,nombre);
+    }
+
 }
