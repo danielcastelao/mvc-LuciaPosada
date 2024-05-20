@@ -7,7 +7,7 @@ public class ObserverLimite implements Observer{
     /**
      * Velocidad maxima
      */
-    public final static int VELOCIDAD_LIMITE = 100;
+    public final static int VELOCIDAD_LIMITE = 120;
 
     /**
      * Comprueba si el coche cuya velocidad se a actualizado supera el limite de velocidad
