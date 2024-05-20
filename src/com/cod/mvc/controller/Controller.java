@@ -21,4 +21,7 @@ public class Controller {
         miModel.crearCoche(matricula,nombre);
     }
 
+    public void cambiarVelocidad(String matricula, Integer velocidad){
+        miModel.cambiarVelocidad(matricula, velocidad);
+    }
 }
