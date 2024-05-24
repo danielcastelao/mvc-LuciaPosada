@@ -33,7 +33,7 @@ public class Model implements Observable {
      */
     public void notifyObservers(Coche coche) {
         for(Observer observer : observers){
-            observer.update(coche);
+            observer.update(coche,this);
         }
     }
 
