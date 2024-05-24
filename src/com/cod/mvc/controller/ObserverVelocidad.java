@@ -1,6 +1,7 @@
 package com.cod.mvc.controller;
 
 import com.cod.mvc.model.Coche;
+import com.cod.mvc.model.Model;
 import com.cod.mvc.view.View;
 
 public class ObserverVelocidad implements Observer{
@@ -9,7 +10,7 @@ public class ObserverVelocidad implements Observer{
      * @param coche el objeto tipo coche que se a actualizado
      */
     @Override
-    public void update(Coche coche) {
+    public void update(Coche coche,Model miModel) {
         View.muestraVelocidad(coche.matricula,coche.velocidad);
     }
 }
