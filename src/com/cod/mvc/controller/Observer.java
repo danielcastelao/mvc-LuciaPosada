@@ -4,5 +4,5 @@ import com.cod.mvc.model.Coche;
 import com.cod.mvc.model.Model;
 
 public interface Observer {
-    void update(Coche arg,Model modelo);
+    void update(Coche arg);
 }

@@ -41,9 +41,9 @@ public class Model implements Observable {
      * Recorre los observers del arraylist y los notifica de un cambio
      * @param coche el objecto en el que se ha producido un cambio
      */
-    public void notifyObservers(Coche coche, Model model) {
+    public void notifyObservers(Coche coche) {
         for(Observer observer : observers){
-            observer.update(coche,model);
+            observer.update(coche);
         }
     }
 
@@ -82,7 +82,7 @@ public class Model implements Observable {
     public Integer cambiarVelocidad(String matricula,Integer velocidad){
         Coche coche = getCoche(matricula);
         coche.velocidad = velocidad;
-        notifyObservers(coche,this);
+        notifyObservers(coche);
         return coche.velocidad;
     }
 

@@ -10,7 +10,7 @@ public class ObserverVelocidad implements Observer{
      * @param coche el objeto tipo coche que se a actualizado
      */
     @Override
-    public void update(Coche coche,Model miModel) {
+    public void update(Coche coche) {
         View.muestraVelocidad(coche.matricula,coche.velocidad);
     }
 }
