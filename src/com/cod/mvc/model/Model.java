@@ -74,6 +74,22 @@ public class Model implements Observable {
     }
 
     /**
+     * Busca un coche por matricula y de existir, notifica los observers
+     * @param matricula identificador unico del coche
+     * @return true de encontrar cochem false si no se encontro
+     */
+    public boolean buscarCoche(String matricula) {
+        Coche coche =  getCoche(matricula);
+        if(coche!=null){
+            notifyObservers(coche,this);
+            return true;
+        }else{
+            System.out.println("El coche buscado no existe");
+            return false;
+        }
+    }
+
+    /**
      * Cambia la velocidad del coche cuya matricula a sido especificada
      * @param matricula identificador unico del coche
      * @param velocidad variable por la que cambiar la velocidad
