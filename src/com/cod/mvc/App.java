@@ -1,7 +1,6 @@
 package com.cod.mvc;
 
 import com.cod.mvc.controller.Controller;
-import com.cod.mvc.model.Model;
 
 public class App {
     public static void main(String[] args) {
