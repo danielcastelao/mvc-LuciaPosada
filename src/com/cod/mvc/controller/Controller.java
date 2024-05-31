@@ -5,9 +5,11 @@ import com.cod.mvc.model.Model;
 
 public class Controller {
 
-    private final Model miModel = new Model();
+    private final Model miModel;
 
     public Controller(Model miModel) {
+
+        this.miModel = Model.getInstance();
 
         ObserverVelocidad ObVelocida = new ObserverVelocidad();
         miModel.addObserver(ObVelocida);
