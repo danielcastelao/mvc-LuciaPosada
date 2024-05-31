@@ -11,9 +11,12 @@ public class App {
 
         miController.crearCoche("LaFerrari", "SBC 1234");
         miController.crearCoche("Alpine", "HYU 4567");
+        miController.crearCoche("Seat", "CDY 5866");
 
         miController.cambiarVelocidad("SBC 1234", 30);
         miController.cambiarVelocidad("HYU 4567", 150);
+
+        miController.buscarCoche("SBC 1234");
 
     }
 }
