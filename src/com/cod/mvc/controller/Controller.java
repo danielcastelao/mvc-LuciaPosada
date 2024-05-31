@@ -17,6 +17,9 @@ public class Controller {
         ObserverLimite ObLimite = new ObserverLimite();
         miModel.addObserver(ObLimite);
 
+        ObserverBuscar ObBuscar = new ObserverBuscar();
+        miModel.addObserver(ObBuscar);
+
     }
 
     /**
@@ -35,5 +38,13 @@ public class Controller {
      */
     public void cambiarVelocidad(String matricula, Integer velocidad){
         miModel.cambiarVelocidad(matricula, velocidad);
+    }
+
+    /**
+     * Busca un coche
+     * @param matricula por la que buscar el coche
+     */
+    public void buscarCoche(String matricula){
+        miModel.buscarCoche(matricula);
     }
 }
