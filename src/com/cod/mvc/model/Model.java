@@ -11,6 +11,16 @@ public class Model implements Observable {
 
     public static ArrayList<Observer> observers = new ArrayList<>();
 
+    static Model miModel = new Model();
+
+    /**
+     * Retorna una estancia del Modelo
+     * @return Modelo
+     */
+    public static Model getInstance(){
+        return miModel;
+    }
+
     /**
      * Añade un objecto de tipo observer al arraylist [observers]
      * @param observer objecto a añadir al list
