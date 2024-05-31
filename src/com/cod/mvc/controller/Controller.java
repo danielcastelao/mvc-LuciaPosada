@@ -9,7 +9,7 @@ public class Controller {
 
     public Controller(Model miModel) {
 
-        this.miModel = Model.getInstance();
+        this.miModel = miModel;
 
         ObserverVelocidad ObVelocida = new ObserverVelocidad();
         miModel.addObserver(ObVelocida);
