@@ -11,7 +11,7 @@ public class ObserverBuscar implements Observer{
      * @param coche el objeto tipo coche que se a actualizado
      */
     @Override
-    public void update(Coche coche, Model modelo) {
+    public void update(Coche coche) {
         View.muestraDatosCoche(coche.matricula,coche.modelo,coche.velocidad);
     }
 }

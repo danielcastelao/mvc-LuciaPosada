@@ -5,9 +5,8 @@ import com.cod.mvc.model.Model;
 
 public class App {
     public static void main(String[] args) {
-        Model miModel = Model.getInstance();
 
-        Controller miController = new Controller(miModel);
+        Controller miController = new Controller();
 
         miController.crearCoche("LaFerrari", "SBC 1234");
         miController.crearCoche("Alpine", "HYU 4567");
