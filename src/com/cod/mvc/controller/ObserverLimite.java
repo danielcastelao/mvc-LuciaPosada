@@ -20,8 +20,9 @@ public class ObserverLimite implements Observer{
      * @param coche el objeto tipo coche que se a actualizado
      */
     @Override
-    public void update(Coche coche,Model miModel) {
+    public void update(Coche coche) {
         if(coche.velocidad>VELOCIDAD_LIMITE){
+            Model miModel = Model.getInstance();
             miModel.cambiarVelocidad(coche.matricula,coche.velocidad-REDUCCION_VELOCIDAD);
             System.out.println("Limite de velocidad sobrepasado, reduciendo velocidad. Ahora el coche va a "+coche.velocidad);
         }
