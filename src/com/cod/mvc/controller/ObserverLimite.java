@@ -22,7 +22,7 @@ public class ObserverLimite implements Observer{
     @Override
     public void update(Coche coche,Model miModel) {
         if(coche.velocidad>VELOCIDAD_LIMITE){
-            miModel.cambiarVelocidad(coche.matricula,coche.velocidad-REDUCCION_VELOCIDAD);
+            miModel.bajarVelocidad(coche.matricula, REDUCCION_VELOCIDAD);
             System.out.println("Limite de velocidad sobrepasado, reduciendo velocidad. Ahora el coche va a "+coche.velocidad);
         }
     }
