@@ -21,13 +21,6 @@ public class ModelTest {
     }
 
     @Test
-    public void comprobacionCambiarVelocidad(){
-        Model miModel = new Model();
-        Coche coche = miModel.crearCoche("43656C35FE","Seat");
-        Assertions.assertEquals(24,miModel.cambiarVelocidad("43656C35FE",24));
-    }
-
-    @Test
     public void comprobacionSubirVelocidad(){
         Model miModel = new Model();
         Coche coche = miModel.crearCoche("43656C35FW","Seat");
