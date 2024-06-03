@@ -63,7 +63,7 @@ public class Model implements Observable {
     }
 
     // ToDo: Pendiente de eliminacion
-    
+
     /**
      * Cambia la velocidad del coche cuya matricula a sido especificada
      * @param matricula identificador unico del coche
@@ -86,6 +86,24 @@ public class Model implements Observable {
     public Integer subirVelocidad(String matricula, Integer v){
         Coche coche = getCoche(matricula);
         coche.velocidad = coche.velocidad + v;
+        notifyObservers(coche,this);
+        return coche.velocidad;
+    }
+
+    /**
+     * Disminulle la velocidad del coche cuya matricula a sido especificada
+     * @param matricula identificador unico del coche
+     * @param v variableque se le va a restar a la velocidad
+     * @return nueva velocidad
+     */
+    public Integer bajarVelocidad(String matricula, Integer v){
+        Coche coche = getCoche(matricula);
+        int nuevaVelocidad = coche.velocidad - v;
+        if (nuevaVelocidad < 0) {
+            coche.velocidad = 0;
+        }else{
+            coche.velocidad = nuevaVelocidad;
+        }
         notifyObservers(coche,this);
         return coche.velocidad;
     }
