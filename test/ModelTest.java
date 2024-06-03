@@ -28,6 +28,14 @@ public class ModelTest {
     }
 
     @Test
+    public void comprobacionBajarVelocidad(){
+        Model miModel = new Model();
+        Coche coche = miModel.crearCoche("43656C35FW","Seat");
+        miModel.subirVelocidad("43656C35FW", 100); // Los coche se crean a 0 v, asi que hay que subirles la velocidad primero
+        Assertions.assertEquals(60,miModel.bajarVelocidad("43656C35FX",40));
+    }
+
+    @Test
     public void getVelocidad(){
         Model miModel = new Model();
         Coche coche = miModel.crearCoche("43656C35FR","Seat");
