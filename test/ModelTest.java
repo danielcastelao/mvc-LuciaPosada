@@ -1,6 +1,6 @@
 
-import com.cod.mvc.model.Coche;
-import com.cod.mvc.model.Model;
+import cod.mvc.model.Coche;
+import cod.mvc.model.Model;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -25,6 +25,13 @@ public class ModelTest {
         Model miModel = new Model();
         Coche coche = miModel.crearCoche("43656C35FE","Seat");
         Assertions.assertEquals(24,miModel.cambiarVelocidad("43656C35FE",24));
+    }
+
+    @Test
+    public void comprobacionSubirVelocidad(){
+        Model miModel = new Model();
+        Coche coche = miModel.crearCoche("43656C35FW","Seat");
+        Assertions.assertEquals(24,miModel.subirVelocidad("43656C35FE",24));
     }
 
     @Test
