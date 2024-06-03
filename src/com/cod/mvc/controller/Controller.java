@@ -26,18 +26,6 @@ public class Controller {
         miModel.crearCoche(matricula,modelo);
     }
 
-
- // ToDo: Pendiente de eliminacion
-
-    /**
-     * Cambiar la velocidad de un coche
-     * @param matricula por la que buscar el coche
-     * @param velocidad nueva
-     */
-    public void cambiarVelocidad(String matricula, Integer velocidad){
-        miModel.cambiarVelocidad(matricula, velocidad);
-    }
-
     /**
      * Aumenta la velocidad de un coche
      * @param matricula por la que buscar el coche
