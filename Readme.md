@@ -16,7 +16,7 @@ Utiliza objetos coches, modifica la velocidad y la muestra
 
 ### Diagrama de clases:
 
-![DClases](img/Clases)
+![DClases](img/Clases.jpg)
 
 ---
 
@@ -24,4 +24,4 @@ Utiliza objetos coches, modifica la velocidad y la muestra
 
 Ejemplo básico del procedimiento, sin utilizar los nombres de los métodos
 
-![DSecuencia](img/Secuencia)
+![DSecuencia](img/Secuencia.jpg)
